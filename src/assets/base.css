@@ -1,0 +1,43 @@
+:root {
+  --white: #ffffff;
+  --black: #181818;
+  --gap: 1rem;
+  --min: 420px;
+}
+
+:root {
+  --color-background: var(--white);
+  --color-text: var(--black);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--black);
+    --color-text: var(--white);
+  }
+}
+@media (max-width: 420px) {
+  :root {
+    --min: 280px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+}
